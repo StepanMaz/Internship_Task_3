@@ -1,0 +1,15 @@
+<div *ngIf="book" class="book-info-container">
+    <img class="cover" src="{{book.cover}}" alt="Loading...">
+    <div>
+        <h2>{{book.title}}</h2>
+        <br>
+        <div class="flex-container">
+            <p class="stats-text">Rating: {{book.rating}}</p>
+            <p class="stats-text">Reviews: {{book.reviewNumber}}</p>
+        </div>
+    </div>
+    <div class="buttons-container">
+        <button mat-raised-button class="action-button"><mat-icon>visibility</mat-icon></button>
+        <button mat-raised-button class="action-button"><mat-icon>edit</mat-icon></button>
+    </div>
+</div>

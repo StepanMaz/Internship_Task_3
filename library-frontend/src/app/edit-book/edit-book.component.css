@@ -1,0 +1,42 @@
+.form-container {
+  display: flex;
+}
+
+.form-border {
+  border: 2px black solid;
+  border-radius: 7px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.input-form-field {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.content-form-field { 
+  margin: 20px;
+  height: calc(100% - 20px);
+  width: calc(100% - 40px);
+}
+
+.content-textarea {
+  resize: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-style {
+  margin: 10px;
+}
+
+.column1 {
+  flex: 1
+}
+
+.column2 {
+  flex: 1.5
+}

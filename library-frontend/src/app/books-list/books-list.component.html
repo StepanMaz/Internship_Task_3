@@ -1,0 +1,8 @@
+<mat-tab-group>
+    <mat-tab label="All">
+        <div class="grid">
+            <app-books-list-item *ngFor="let book of books | async;" [book]="book"></app-books-list-item>
+        </div>
+    </mat-tab>
+    <mat-tab label="Recomended"> Content 2 </mat-tab>
+</mat-tab-group>

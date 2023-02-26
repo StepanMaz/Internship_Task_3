@@ -1,0 +1,38 @@
+<form class="form-border">
+    <h2>Add book</h2>
+    <hr>
+    <br>
+    <div class="form-container">
+        <div class="column1">
+            <mat-form-field class="input-form-field" appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-form-field" appearance="fill">
+                <mat-label>Cover</mat-label>
+                <ngx-mat-file-input accept="image/*"></ngx-mat-file-input>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-form-field" appearance="fill">
+                <mat-label>Genre</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="input-form-field" appearance="fill">
+                <mat-label>Author</mat-label>
+                <input matInput>
+            </mat-form-field>
+        </div>
+        <div class="column2">
+            <mat-form-field class="content-form-field" appearance="fill">
+                <mat-label>Content</mat-label>
+                <textarea class="content-textarea" matInput></textarea>
+            </mat-form-field>
+        </div>
+    </div>
+    <div class="button-container">
+        <button mat-flat-button color="primary" class="button-style">Add</button>
+        <button mat-flat-button color="accent" class="button-style">Clear</button>
+    </div>
+</form>

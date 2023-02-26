@@ -1,0 +1,52 @@
+.flex-container {
+    display: flex;
+}
+
+.book-details {
+    padding: 20px;
+}
+
+.image-container {
+    flex: 0.6;
+}
+
+.text-container {
+    flex: 1;
+    max-height: 100%;
+    overflow-y: hidden;
+    min-width: 100px;
+}
+
+.book-content {
+    overflow: auto;
+    max-height: 70%;
+}
+
+.stats-text {
+    flex: 1;
+    margin: 10px 20px 0px 20px;
+    min-width: 100px;
+}   
+
+.reviews-list {
+    overflow: auto;
+    margin: 10px 20px 10px 40px;
+}
+
+.book-cover {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+.btn-close {
+    height: 40px;
+    width: 40px;
+    font-size: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: white;
+    border: 0px;
+}

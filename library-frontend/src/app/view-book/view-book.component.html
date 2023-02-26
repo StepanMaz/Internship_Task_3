@@ -1,0 +1,24 @@
+<h1 mat-dialog-title class="title" style="font-size: 30px;">Details</h1>
+<button mat-button class="btn-close" (click)="onCloseClick()">X</button>
+<hr>
+<div mat-dialog-content class="book-details flex-container">
+    <div class="image-container">
+        <img class="book-cover" src="{{data.cover}}">
+        <div class="flex-container">
+            <div class="stats-text" style="text-align: right;">Rating: {{data.rating}}</div>
+            <div class="stats-text">Reviews: {{data.reviews.length}}</div>
+        </div>
+    </div>
+    <div class="text-container">
+        <h2>{{data.title}}</h2>
+        <h4>{{data.author}}, {{data.genre}}</h4>
+        <div class="book-content">
+            {{data.content}}
+        </div>
+    </div>
+</div>
+<div *ngFor="let review of data.reviews" class="reviews-list">
+    <hr>
+    <h3>{{review.reviewer}}</h3>
+    <h3>{{review.message}}</h3>
+</div>
