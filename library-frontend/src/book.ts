@@ -23,3 +23,12 @@ export interface ReviewedBookDTO {
 	reviewNumber: number
 }
 
+export interface BookDTO {
+    id: number,
+ 	title: string,
+ 	author: string,
+	cover: string,
+	genre: string,
+ 	content: string
+}
+

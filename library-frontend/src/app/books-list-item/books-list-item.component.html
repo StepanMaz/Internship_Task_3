@@ -9,7 +9,7 @@
         </div>
     </div>
     <div class="buttons-container">
-        <button mat-raised-button class="action-button"><mat-icon>visibility</mat-icon></button>
-        <button mat-raised-button class="action-button"><mat-icon>edit</mat-icon></button>
+        <button mat-raised-button (click)="OpenDialogWindow()" class="action-button"><mat-icon class="icon">visibility</mat-icon></button>
+        <a mat-raised-button class="action-button" routerLink="/edit/{{book.id}}"><mat-icon class="icon">edit</mat-icon></a>
     </div>
 </div>

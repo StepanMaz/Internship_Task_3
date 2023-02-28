@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http'
-import {ExpandedBookDTO} from './book.js'
-import { environment } from './environments/environment.js'
+import { environment } from './environments/environment'
 import { Observable } from 'rxjs';
 
 export class BookService

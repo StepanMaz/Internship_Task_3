@@ -1,23 +1,25 @@
-<h1 mat-dialog-title class="title" style="font-size: 30px;">Details</h1>
-<button mat-button class="btn-close" (click)="onCloseClick()">X</button>
+<div class="flex-container top-aligner">
+    <h1 mat-dialog-title class="title" style="font-size: 30px;">Details</h1>
+    <button mat-button class="btn-close" (click)="onCloseClick()">X</button>
+</div>
 <hr>
-<div mat-dialog-content class="book-details flex-container">
+<div *ngIf="(data | async) != null" mat-dialog-content class="book-details flex-container">
     <div class="image-container">
-        <img class="book-cover" src="{{data.cover}}">
+        <img class="book-cover" src="{{(data | async)?.cover}}" alt="Loading...">
         <div class="flex-container">
-            <div class="stats-text" style="text-align: right;">Rating: {{data.rating}}</div>
-            <div class="stats-text">Reviews: {{data.reviews.length}}</div>
+            <div class="stats-text" style="text-align: right;">Rating: {{(data | async)?.rating}}</div>
+            <div class="stats-text">Reviews: {{(data | async)?.reviews?.length }}</div>
         </div>
     </div>
     <div class="text-container">
-        <h2>{{data.title}}</h2>
-        <h4>{{data.author}}, {{data.genre}}</h4>
+        <h2>{{(data | async)?.title}}</h2>
+        <h4>{{(data | async)?.author}}, {{(data | async)?.genre}}</h4>
         <div class="book-content">
-            {{data.content}}
+            {{(data | async)?.content}}
         </div>
     </div>
 </div>
-<div *ngFor="let review of data.reviews" class="reviews-list">
+<div *ngFor="let review of (data | async)?.reviews" class="reviews-list">
     <hr>
     <h3>{{review.reviewer}}</h3>
     <h3>{{review.message}}</h3>

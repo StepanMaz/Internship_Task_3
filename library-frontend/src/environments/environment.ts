@@ -1,4 +1,4 @@
 export const environment = {
-    apiURL: 'https://localhost:',
+    apiURL: 'https://localhost:7094',
     secret: ''
 };

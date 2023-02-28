@@ -1,8 +1,12 @@
-<mat-tab-group>
+<mat-tab-group mat-stretch-tabs="false" >
     <mat-tab label="All">
         <div class="grid">
-            <app-books-list-item *ngFor="let book of books | async;" [book]="book"></app-books-list-item>
+            <app-books-list-item *ngFor="let book of books | async" [book]="book"></app-books-list-item>
         </div>
     </mat-tab>
-    <mat-tab label="Recomended"> Content 2 </mat-tab>
+    <mat-tab label="Recomended">
+        <div class="grid">
+            <app-books-list-item *ngFor="let book of recommended | async" [book]="book"></app-books-list-item>
+        </div>
+    </mat-tab>
 </mat-tab-group>

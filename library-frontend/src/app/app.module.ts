@@ -18,6 +18,9 @@ import { MatButtonModule }  from '@angular/material/button';
 import { MaterialFileInputModule }  from 'ngx-material-file-input';
 import { MatTabsModule }  from '@angular/material/tabs';
 import { MatIconModule }  from '@angular/material/icon';
+import { HttpClientModule } from '@angular/common/http'; 
+import { MatToolbarModule }  from '@angular/material/toolbar';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +36,14 @@ import { MatIconModule }  from '@angular/material/icon';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([]),
+    RouterModule.forRoot([
+      {
+        path: '', component: BooksPageComponent
+      },
+      {
+        path: 'edit/:id', component: BooksPageComponent
+      }
+    ]),
     MatDialogModule,
     MatFormFieldModule,
     AppRoutingModule,
@@ -43,7 +53,9 @@ import { MatIconModule }  from '@angular/material/icon';
     MatButtonModule,
     MaterialFileInputModule,
     MatTabsModule,
-    MatIconModule
+    MatIconModule,
+    HttpClientModule,
+    MatToolbarModule
   ],
   providers: [{provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: false}}],
   bootstrap: [AppComponent]

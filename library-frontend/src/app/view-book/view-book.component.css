@@ -33,6 +33,10 @@
     margin: 10px 20px 10px 40px;
 }
 
+.top-aligner {
+    justify-content: space-between;
+}
+
 .book-cover {
     display: block;
     margin-left: auto;
@@ -43,10 +47,8 @@
 .btn-close {
     height: 40px;
     width: 40px;
+    float: right;
     font-size: 30px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
     background-color: white;
     border: 0px;
 }
